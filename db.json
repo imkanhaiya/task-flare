@@ -1,0 +1,35 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "title": "Complete Angular tutorial",
+            "status": "Completed",
+            "due_date": "2024-02-16T09:30:00.000Z"
+        },
+        {
+            "id": 2,
+            "title": "Update project documentation",
+            "status": "Not Completed",
+            "due_date": "2024-02-18T15:45:00.000Z"
+        },
+        {
+            "id": 3,
+            "title": "Review pull requests",
+            "status": "Completed",
+            "due_date": "2024-02-25T12:20:00.000Z"
+        },
+        {
+            "id": 4,
+            "title": "Plan sprint meeting",
+            "status": "Completed",
+            "due_date": "2024-02-19T10:00:00.000Z"
+        },
+        {
+            "id": 5,
+            "title": "Prepare presentation for the client",
+            "status": "Not Completed",
+            "due_date": "2024-03-28T14:00:00.000Z"
+        }
+        
+    ]
+}
