@@ -8,38 +8,19 @@
     box-sizing: border-box; /* Include padding in the container's size */
   }
   
-  /* Header styling */
-  header {
-    padding: 20px 0;
-    text-align: center;
-    background-color: #f0f0f0; /* Light background for the header */
-  }
+section {
+  margin: 20px 0; /* Spacing around the app-todo component */
+}
   
-  header h1 {
-    margin: 0;
-    color: #333;
-  }
+/* Footer styling */
+footer {
+  padding: 20px 0;
+  text-align: center;
+  /* background-color: #f0f0f0; */
+}
   
-  /* Main content area styling */
-  main {
-    flex-grow: 1; /* Allow main to grow and fill available space */
-    padding: 20px;
-    background-color: #fff;/* White background  for content area */
-  }
-
-  section {
-    margin: 20px 0; /* Spacing around the app-todo component */
-  }
-  
-  /* Footer styling */
-  footer {
-    padding: 20px 0;
-    text-align: center;
-    background-color: #f0f0f0; /* Light background for the footer, matching header */
-  }
-  
-  footer p {
-    margin: 0;
-    color: #666; /* Slightly darker text for contrast */
-  }
+footer p {
+  margin: 0;
+  color: #666; /* Slightly darker text for contrast */
+}
   

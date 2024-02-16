@@ -4,7 +4,14 @@
     flex-direction: column;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px
+}
+
+.action-buttons {
+    display: flex;
+    margin: 5px 50px;
+    padding: 5px 50px;
+    justify-content: center;
 }
 
 h1 {
