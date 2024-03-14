@@ -3,6 +3,7 @@ import { TodoService } from '../todo.service';
 import { Todo } from '../todo';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -15,7 +16,7 @@ export class TodoComponent {
   todoService: TodoService = inject(TodoService)
   todoList: Todo[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
     this.todoService.getallTodos().subscribe((todos: Todo[] | [])=> {
       this.todoList = todos;
       console.log("hey me todolist", this.todoList)
@@ -23,6 +24,6 @@ export class TodoComponent {
   }
 
   onAddTodo() {
-    console.log("Hi, did you just click on Add Todo?")
+    this.router.navigate(['/add-todo'])
   }
 }

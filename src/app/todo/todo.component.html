@@ -1,41 +1,40 @@
 <div class="todo-container">
-    <main>
-        <section>
-            <h1>Tasks to do</h1>
-        </section>
+    <section>
+        <h1>Tasks to do</h1>
+    </section>
 
-        <section class="action-buttons">
-            <button class="btn button-primary" (click)="onAddTodo()">Add Todo</button>
-            <button class="btn button-edit">Edit Todo</button>
-            <button class="btn button-delete">Delete Todo</button>
-        </section>
+    <section class="action-buttons">
+        <button class="btn button-primary" (click)="onAddTodo()">Add Todo</button>
+        <!-- <button class="btn button-primary" routerLink="/add-todo">Add Todo</button> -->
+        <button class="btn button-edit">Edit Todo</button>
+        <button class="btn button-delete">Delete Todo</button>
+    </section>
 
-        <section>
-            <table>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Status</th>
-                    <th>Due Date</th>
-                    <th>Details</th>
-                </tr>
-                <tr *ngFor="let todo of todoList">
-                    <td>{{todo.id}}</td>
-                    <td>{{todo.title}}</td>
-                    <td >{{todo.status}}</td>
-                    <td>{{todo.due_date | date: 'dd/MM/yyyy'}}</td>
-                    <td>
-                        <a 
-                        routerLink="/todo-details" 
-                        routerLinkActive="Active" 
-                        areaCurrentWhenActive="page">
-                        Get Details
-                        </a>
-                    </td>
-                </tr>
-            </table>
-        </section>
-    </main>
+    <section>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Due Date</th>
+                <th>Details</th>
+            </tr>
+            <tr *ngFor="let todo of todoList">
+                <td>{{todo.id}}</td>
+                <td>{{todo.title}}</td>
+                <td >{{todo.status}}</td>
+                <td>{{todo.due_date | date: 'dd/MM/yyyy'}}</td>
+                <td>
+                    <a 
+                    routerLink="/todo-details" 
+                    routerLinkActive="Active" 
+                    areaCurrentWhenActive="page">
+                    Get Details
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </section>
 </div>
 
 
