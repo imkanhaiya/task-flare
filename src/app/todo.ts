@@ -1,7 +1,9 @@
-export interface Todo {
-    id: Number;
-    title: String;
-    details: String;
-    status: String;
-    due_date: Date; 
+export class Todo {
+    constructor (
+        public id: Number,
+        public title: String,
+        public details: String,
+        public status: String,
+        public due_date: Date, 
+    ) {}
 }
