@@ -6,41 +6,47 @@
     padding: 8px;
 }
 
-form {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 0.5rem;
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-submit {
+    display: flex;
+    justify-content: center;
 }
 
 label {
     margin: 2px;
     padding: 2px;
-    text-align: right;
+    font-weight: bold;
+    /* text-align: right; */
 }
 
 input {
     margin: 2px;
-    padding: 5px;
-    width: 160px;
-}
-
-button {
-    grid-column: span 2;
-    width: 120px;
-    justify-self: center;
+    padding: 8px;
+    width: 450px;
 }
 
 .ng-valid:not(form) {
-    border-left: 4px solid #42A948;
+    border-left: 5px solid #42A948;
 }
 
 .ng-invalid:not(form) {
-    border-left: 4px solid #a94442;
+    border-left: 5px solid #a94442;
 }
 
 .danger {
+    margin: 2px;
     background-color: #e29d9c;
     color: #a94442;
     padding: 5px 0 5px 10px;
+}
+
+
+.btn {
+    width: 120px;
+    font-size: 20px;
 }
 
