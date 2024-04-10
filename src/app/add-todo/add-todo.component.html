@@ -10,19 +10,34 @@
         
         <form #todoForm="ngForm" action="">
             <label for="todoId">Id: </label>
-            <input type="text" name="todoId" id="todoId" required [(ngModel)]="model.id">
+            <input type="text" name="todoId" id="todoId" #todoId="ngModel" required [(ngModel)]="model.id">
+            <div class="danger" [hidden]="todoId.valid || todoId.pristine">
+                Id is required
+            </div>
             
             <label for="title">Title: </label>
-            <input type="text" name="title" id="title" required [(ngModel)]="model.title">
+            <input type="text" name="title" id="title" #title="ngModel" required [(ngModel)]="model.title">
+            <div class="danger" [hidden]="title.valid || title.pristine">
+                Title is required
+            </div>
         
             <label for="details">Details: </label>
-            <input type="text" name="details" id="details" required [(ngModel)]="model.details">
+            <input type="text" name="details" id="details" #details="ngModel" required [(ngModel)]="model.details">
+            <div class="danger" [hidden]="details.valid || details.pristine">
+                Details are required
+            </div>
         
             <label for="status">Status: </label>
-            <input type="text" name="status" id="status" required [(ngModel)]="model.status">
-        
+            <input type="text" name="status" id="status" #status="ngModel" required [(ngModel)]="model.status">
+            <div class="danger" [hidden]="status.valid || status.pristine">
+                Status is required
+            </div>
+
             <label for="date">Date: </label>
-            <input type="Date" name="date" id="Date" required [(ngModel)]="model.due_date">
+            <input type="Date" name="date" id="Date" #date="ngModel" required [(ngModel)]="model.due_date">
+            <div class="danger" [hidden]="date.valid || date.pristine">
+                Date is required
+            </div>
             
             <button type="submit" class="btn button-primary">Submit</button>
 

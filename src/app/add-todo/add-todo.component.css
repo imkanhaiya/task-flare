@@ -30,3 +30,17 @@ button {
     justify-self: center;
 }
 
+.ng-valid:not(form) {
+    border-left: 4px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+    border-left: 4px solid #a94442;
+}
+
+.danger {
+    background-color: #e29d9c;
+    color: #a94442;
+    padding: 5px 0 5px 10px;
+}
+
