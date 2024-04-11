@@ -15,4 +15,8 @@ export class TodoService {
     return this.http.request<Todo[] | []>('GET', this.baseUrl)
   }
 
+  addTodo(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.baseUrl, todo);
+  }
+
 }

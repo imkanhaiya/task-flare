@@ -29,7 +29,7 @@ input {
     width: 450px;
 }
 
-.ng-valid:not(form) {
+.ng-valid:not(.ng-pristine):not(form) {
     border-left: 5px solid #42A948;
 }
 

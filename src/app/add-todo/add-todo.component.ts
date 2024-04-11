@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Todo } from '../todo';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-add-todo',
@@ -12,6 +13,16 @@ import { Todo } from '../todo';
 })
 export class AddTodoComponent {
 
-  model = new Todo(1, "Watch Akshay Saini Tutorial", "on youtube", "Not Completed", new Date())
+  todoService: TodoService = inject(TodoService);
+
+  model = new Todo(undefined, undefined, undefined, undefined, undefined);
+
+  onSubmit(todoForm: NgForm){
+    const newTodo = todoForm.value;
+    console.log("form value", newTodo);
+    this.todoService.addTodo(newTodo).subscribe((newTodo: Todo) => {
+      console.log('NewTodo Added', newTodo)
+    })
+  }
 
 }
