@@ -10,10 +10,10 @@
         
         <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
             <div class="form-item">
-                <label for="todoId">Id</label>
-                <input type="text" name="todoId" id="todoId" #todoId="ngModel" 
+                <label for="id">Id</label>
+                <input type="text" name="id" id="id" #id="ngModel" 
                 [required]="model.id !== undefined" [(ngModel)]="model.id">
-                <div class="danger" [hidden]="todoId.pristine || todoId.valid">
+                <div class="danger" [hidden]="id.pristine || id.valid">
                 Id is required
                 </div>
             </div>
