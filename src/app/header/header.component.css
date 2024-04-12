@@ -4,10 +4,11 @@
     flex-direction: column;
     min-height: 20vh;
     max-height: 20vh;
+    background-color: #0060BF;
   }
 
   header h1 {
     margin: 0;
-    color: #333;
+    color: #f4f4f4;
     text-align: center;
   }
