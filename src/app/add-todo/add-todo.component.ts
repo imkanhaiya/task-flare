@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Todo } from '../todo';
@@ -15,7 +15,7 @@ export class AddTodoComponent {
 
   todoService: TodoService = inject(TodoService);
 
-  model = new Todo(undefined, undefined, undefined, undefined, undefined);
+  model = new Todo(null, null, null, null, null);
 
   onSubmit(todoForm: NgForm){
     const newTodo = todoForm.value;
@@ -24,5 +24,5 @@ export class AddTodoComponent {
       console.log('NewTodo Added', newTodo)
     })
   }
-
+  
 }

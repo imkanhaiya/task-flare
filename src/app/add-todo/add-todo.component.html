@@ -8,7 +8,7 @@
 
         <!-- {{model | json}} -->
         
-        <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
+        <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm);todoForm.reset()">
             <div class="form-item">
                 <label for="id">Id</label>
                 <input type="text" name="id" id="id" #id="ngModel" 
@@ -51,7 +51,8 @@
             </div>
 
             <div class="form-submit">
-                <button type="submit" class="btn button-primary">Submit</button>
+                <button type="submit" class="btn button-primary" [disabled]="!todoForm.form.valid">
+                Submit</button>
             </div>
 
         </form>
