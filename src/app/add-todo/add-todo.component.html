@@ -7,8 +7,8 @@
     <section class="form">
 
         <!-- {{model | json}} -->
-        
         <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm);todoForm.reset()">
+            
             <div class="form-item">
                 <label for="id">Id</label>
                 <input type="text" name="id" id="id" #id="ngModel" 
@@ -43,9 +43,9 @@
             </div>
 
             <div class="form-item">
-                <label for="date">Date: </label>
-                <input type="Date" name="date" id="Date" #date="ngModel" [required]="model.due_date !== undefined" [(ngModel)]="model.due_date">
-                <div class="danger" [hidden]="date.pristine || (date.valid && date.dirty)">
+                <label for="due_date">Due Date: </label>
+                <input type="Date" name="due_date" id="due_date" #dueDate="ngModel" [required]="model.due_date !== undefined" [(ngModel)]="model.due_date">
+                <div class="danger" [hidden]="dueDate.pristine || (dueDate.valid && dueDate.dirty)">
                     Date is required
                 </div>
             </div>
@@ -56,6 +56,7 @@
             </div>
 
         </form>
+
     </section>
 
 </div>

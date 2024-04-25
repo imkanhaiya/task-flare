@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Todo } from './todo';
@@ -15,8 +15,7 @@ export class TodoService {
     return this.http.request<Todo[] | []>('GET', this.baseUrl)
   }
 
-  addTodo(todo: Todo): Observable<Todo> {
-    return this.http.post<Todo>(this.baseUrl, todo);
+  addTodo(todo: Todo): Observable<HttpResponse<Todo>> {
+    return this.http.post<Todo>(this.baseUrl, todo, {observe:'response'});
   }
-
 }

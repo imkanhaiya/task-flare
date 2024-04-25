@@ -3,6 +3,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
+import Swal from 'sweetalert2'
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-todo',
@@ -19,9 +21,13 @@ export class AddTodoComponent {
 
   onSubmit(todoForm: NgForm){
     const newTodo = todoForm.value;
-    console.log("form value", newTodo);
-    this.todoService.addTodo(newTodo).subscribe((newTodo: Todo) => {
-      console.log('NewTodo Added', newTodo)
+    this.todoService.addTodo(newTodo).subscribe((response: HttpResponse<Todo>) => {
+      console.log('New Todo response', response);
+      Swal.fire({
+        title: "Success",
+        text: "Your todo has been added.",
+        icon: "success"
+      });
     })
   }
   
