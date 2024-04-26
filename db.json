@@ -38,16 +38,9 @@
     {
       "id": "6",
       "title": "New Test Task",
-      "details": "Complete Test Task",
+      "details": "Complete new test task",
       "status": "Not Completed",
-      "due_date": "2024-04-30"
-    },
-    {
-      "id": "7",
-      "title": "Newly test task",
-      "details": "Complete newly added test task",
-      "status": "Completed",
-      "due_date": "2024-04-30"
+      "due_date": "2024-05-07"
     }
   ]
 }

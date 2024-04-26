@@ -5,6 +5,7 @@ import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
 import Swal from 'sweetalert2'
 import { HttpResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-todo',
@@ -17,6 +18,8 @@ export class AddTodoComponent {
 
   todoService: TodoService = inject(TodoService);
 
+  constructor(private router: Router) {}
+
   model = new Todo(null, null, null, null, null);
 
   onSubmit(todoForm: NgForm){
@@ -26,8 +29,14 @@ export class AddTodoComponent {
       Swal.fire({
         title: "Success",
         text: "Your todo has been added.",
-        icon: "success"
-      });
+        icon: "success",
+        timer: 10000,
+        timerProgressBar: true,
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      }).then(() => {
+          this.router.navigate([''])
+      })
     })
   }
   
