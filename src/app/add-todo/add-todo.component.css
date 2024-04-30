@@ -29,7 +29,13 @@ input {
     width: 450px;
 }
 
-.ng-valid:not(form) {
+select {
+    margin: 2px;
+    padding: 8px;
+    width: 450px;
+}
+
+.ng-valid:not(form):not(.ng-pristine) {
     border-left: 5px solid #42A948;
 }
 

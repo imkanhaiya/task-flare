@@ -36,7 +36,9 @@
         
             <div class="form-item">
                 <label for="status">Status: </label>
-                <input type="text" name="status" id="status" #status="ngModel" [required]="model.status !== undefined" [(ngModel)]="model.status">
+                <select name="status" id="status" #status="ngModel" [required]="model.status !== 'Select'" [(ngModel)]="model.status">
+                    <option *ngFor="let status of getTodoStatus()" [value]="todoStatus[status]" [disabled]="todoStatus[status] === 'Select'">{{todoStatus[status]}}</option>
+                </select>
                 <div class="danger" [hidden]="status.pristine || status.valid">
                     Status is required
                 </div>
