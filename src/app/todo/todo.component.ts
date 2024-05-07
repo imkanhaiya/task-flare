@@ -19,7 +19,6 @@ export class TodoComponent {
   constructor(private router: Router) {
     this.todoService.getallTodos().subscribe((todos: Todo[] | [])=> {
       this.todoList = todos;
-      console.log("hey me todolist", this.todoList)
     })
   }
 

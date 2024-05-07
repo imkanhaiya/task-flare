@@ -28,7 +28,6 @@ export class AddTodoComponent {
   onSubmit(todoForm: NgForm){
     const newTodo = todoForm.value;
     this.todoService.addTodo(newTodo).subscribe((response: HttpResponse<Todo>) => {
-      console.log('New Todo response', response);
       Swal.fire({
         title: "Success",
         text: "Your todo has been added.",
