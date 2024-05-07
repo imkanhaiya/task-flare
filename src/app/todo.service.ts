@@ -18,4 +18,9 @@ export class TodoService {
   addTodo(todo: Todo): Observable<HttpResponse<Todo>> {
     return this.http.post<Todo>(this.baseUrl, todo, {observe:'response'});
   }
+
+  getTodoDetails(id: Number): Observable<Todo> {
+    return this.http.request<Todo>('GET', `${this.baseUrl}/${id}`) 
+  }
+
 }
