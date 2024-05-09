@@ -23,4 +23,7 @@ export class TodoService {
     return this.http.request<Todo>('GET', `${this.baseUrl}/${id}`) 
   }
 
+  deleteTodo(id: number): Observable<HttpResponse<any>> {
+    return this.http.request<HttpResponse<any>>('DELETE', `${this.baseUrl}/${id}`, {observe: 'response'});
+  }
 }
