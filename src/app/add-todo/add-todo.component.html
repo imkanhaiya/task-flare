@@ -1,7 +1,8 @@
 <div class="add-todo-container">
 
     <section class="h2">
-        <h2>Add to Do</h2>
+        <h2 *ngIf="isVisible">Add to Do</h2>
+        <h2 *ngIf="!isVisible">Edit to Do</h2>
     </section>
 
     <section class="form">

@@ -7,5 +7,6 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 export const routes: Routes = [
     {path: 'add-todo', component: AddTodoComponent},
     {path: 'todo-details/:id', component: TodoDetailsComponent},
+    {path: 'edit-todo/:id', component: AddTodoComponent},
     {path: '', component: HomeComponent},
 ];

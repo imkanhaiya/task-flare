@@ -22,7 +22,7 @@ export class TodoDetailsComponent {
 
   constructor(private router: Router) {
     this.todoId = Number(this.route.snapshot.params['id']);
-    this.todoService.getTodoDetails(this.todoId).subscribe((todoitem: Todo) => {
+    this.todoService.getTodo(this.todoId).subscribe((todoitem: Todo) => {
       this.todo = todoitem;
     })
   }
@@ -55,6 +55,9 @@ export class TodoDetailsComponent {
     });
   }
 
+  onEditTodo(id: any) {
+    console.log("id", id)
+    this.router.navigate(['edit-todo', id])
+  }
 
- 
 }

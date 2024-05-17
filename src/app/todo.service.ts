@@ -19,11 +19,16 @@ export class TodoService {
     return this.http.post<Todo>(this.baseUrl, todo, {observe:'response'});
   }
 
-  getTodoDetails(id: number): Observable<Todo> {
+  getTodo(id: number): Observable<Todo> {
     return this.http.request<Todo>('GET', `${this.baseUrl}/${id}`); 
+  }
+
+  updateTodo(id: number, todo: Todo): Observable<HttpResponse<Todo>> {
+    return this.http.request<Todo>('PUT', `${this.baseUrl}/${id}`,  {body: todo, observe: 'response'})
   }
 
   deleteTodo(id: number): Observable<HttpResponse<any>> {
     return this.http.request<HttpResponse<any>>('DELETE', `${this.baseUrl}/${id}`, {observe: 'response'});
   }
+
 }
