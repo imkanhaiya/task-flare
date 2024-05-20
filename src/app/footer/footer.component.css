@@ -2,12 +2,33 @@
   .footer-container {
     display: flex;
     flex-direction: column;
-    min-height: 20vh;
-    max-height: 20vh;
+    height: 100%;
+    width: 100%;
+    background-color: #F9F9F9;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
   }
 
   footer p {
-    margin: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
     color: #333;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer hr {
+    display: flex;
+    width: 100%;
+    align-self: flex-start;
+    opacity: 0.4;
   }

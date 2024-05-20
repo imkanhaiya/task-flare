@@ -2,13 +2,21 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    min-height: 20vh;
-    max-height: 20vh;
+    position: fixed;
+    top: 0;
+    height: 15%;
+    width: 100%;
+    max-width: 100%;
     background-color: #0060BF;
+    justify-content: center;
   }
 
-  header h1 {
-    margin: 0;
-    color: #f4f4f4;
-    text-align: center;
+  header{
+    margin: 0 40px;
+    padding: 0 40px;
+  }
+
+  img {
+    width: 85px;
+    height: 85px;
   }

@@ -1,10 +1,6 @@
 /* General styles for the todo-container */
 .todo-container {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0 20px
+    height: 100%;
 }
 
 .action-buttons {
@@ -42,6 +38,11 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #eaeaea; /* Highlight row on hover */
+}
+
+section {
+    margin: 8px;
+    padding: 8px;
 }
 
 /* Responsive adjustments */

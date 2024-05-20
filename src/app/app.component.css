@@ -1,7 +1,0 @@
-  /* Main content area styling */
-  main {
-    flex-grow: 1; /* Allow main to grow and fill available space */
-    padding: 20px;
-    background-color: #f9f9f9;/* White background  for content area */
-    color: #333; /* Enhanced text color for better readability */
-  }

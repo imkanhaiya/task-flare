@@ -1,7 +1,4 @@
-/* Reset margins and paddings for all elements */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,13 +6,38 @@
 
 /* Basic styling for the body */
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
   min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  background-color: #F9F9F9;
+  color: #333;
+}
+
+/* Container for wrapping content */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 40px;
+  padding: 10px 40px;
+  flex: 1; /* Grow to take up remaining space */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+app-header, app-footer {
+  display: block; /* Ensure the component behaves as a block element */
+  height: 15vh; /* Take up 20% of the viewport height */
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 0;
 }
 
 /* Responsive typography */
@@ -30,24 +52,10 @@ html {
   }
 }
 
-/* Container for wrapping content */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 /* Basic styling for headers */
 h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
-
-/* Utility classes for margin and padding */
-.mt-1 { margin-top: 1rem; }
-.mb-1 { margin-bottom: 1rem; }
-.pt-1 { padding-top: 1rem; }
-.pb-1 { padding-bottom: 1rem; }
 
 .btn {
   display: inline-block;
@@ -95,9 +103,4 @@ h1, h2, h3, h4, h5, h6 {
 img {
   max-width: 100%;
   height: auto;
-}
-
-section {
-  margin: 8px;
-  padding: 8px;
 }
