@@ -12,11 +12,34 @@
   }
 
   header{
+    display: flex;
     margin: 0 40px;
     padding: 0 40px;
+    justify-content: space-between;
   }
 
   img {
     width: 85px;
     height: 85px;
   }
+
+  ul {
+    display: flex;
+    width: 17%;
+    list-style-type: none;
+    color: #FFF;
+    align-items: end;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover{
+    color: #FFC0CB;
+    transition: color 0.3s;
+}

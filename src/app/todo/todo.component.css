@@ -45,6 +45,19 @@ section {
     padding: 8px;
 }
 
+a {
+    text-decoration: none;
+    color: #1E90FF;
+    border-bottom: 1px solid #1E90FF;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+a:hover{
+    color: #FFC0CB;
+    border-bottom: 1px solid #FFC0CB;
+    transition: color 0.3s, border-color 0.3s;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .todo-container {
