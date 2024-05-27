@@ -1,0 +1,45 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.about-us-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-rows: 320px; /* each gird row height */
+    margin: 5px;
+    padding: 5px;
+}
+
+.about-us-image {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 100%;
+}
+
+.about-us-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
