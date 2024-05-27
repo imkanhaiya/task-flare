@@ -1,10 +1,12 @@
 <div class="header-container">
     <header>
-        <img src="\assets\taskflarelogo.png" alt="Task Flare Logo">
+        <a [routerLink]="['']">
+            <img src="\assets\taskflarelogo.png" alt="Task Flare Logo">
+        </a>
         <ul>
             <li><a [routerLink]="['/tour']">Tour</a></li>
             <li><a [routerLink]="['/add-todo']">Add Todo</a></li>
-            <li><a [routerLink]="['/about']">About</a></li>
+            <li><a [routerLink]="['/about']">About Us</a></li>
         </ul>
     </header>
 </div>
