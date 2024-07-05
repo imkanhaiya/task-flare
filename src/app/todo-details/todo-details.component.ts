@@ -17,11 +17,11 @@ export class TodoDetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   todoService: TodoService = inject(TodoService);
 
-  todoId = -1
+  todoId: string = '-1'
   todo!: Todo | undefined
 
   constructor(private router: Router) {
-    this.todoId = Number(this.route.snapshot.params['id']);
+    this.todoId = this.route.snapshot.params['id'];
     this.todoService.getTodo(this.todoId).subscribe((todoitem: Todo) => {
       this.todo = todoitem;
     })

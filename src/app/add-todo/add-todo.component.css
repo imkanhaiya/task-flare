@@ -9,6 +9,16 @@
     flex-direction: column;
 }
 
+.form-item input[readonly] {
+    background-color: #f1f3f5;
+    color: #5a6268;
+    border: 1px solid #ced4da;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+
+
 .form-submit {
     display: flex;
     justify-content: center;

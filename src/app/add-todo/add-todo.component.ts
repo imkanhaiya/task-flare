@@ -17,10 +17,11 @@ import { TodoComponent } from '../todo/todo.component';
 })
 export class AddTodoComponent implements OnInit {
 
-  todoId!: number;
-  model!: Todo
-  todoItem!: Todo
-  isVisible = true;
+  id!: string | null;
+  updateId!: string | null
+  model!: Todo;
+  todoItem!: Todo;
+  showAddToDo = true;
 
   route: ActivatedRoute = inject(ActivatedRoute);
   todoService: TodoService = inject(TodoService);
@@ -31,25 +32,32 @@ export class AddTodoComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.model = new Todo(null, null, null, this.todoStatus['SELECT'] , null);
+    this.updateId = this.route.snapshot.params['id'];
 
-    this.todoId = Number(this.route.snapshot.params['id']);
-
-    if (this.todoId) {
-      this.isVisible = false;
-      this.todoService.getTodo(this.todoId).subscribe((todo: Todo) => {
+    if (this.updateId) {
+      this.showAddToDo = false;
+      this.todoService.getTodo(this.updateId).subscribe((todo: Todo) => {
         this.model = todo;
         console.log("Model", this.model);
+      })
+    } else {
+      this.todoService.getallTodos().subscribe((todo: Todo[]) => {
+        const preTodoId = todo.length
+        this.id = (preTodoId + 1).toString()
+        this.model = new Todo(this.id, null, null, this.todoStatus['SELECT'] , null)
+        console.log("Current id is", this.id)
       })
     }
   }
 
   onSubmit(todoForm: NgForm){
     this.todoItem = todoForm.value;
-    if (this.todoId) {
-      this.saveUpdateTodo(this.todoId, this.todoItem)
+    if (this.updateId) {
+      this.saveUpdateTodo(this.updateId, this.todoItem)
+      console.log("I m update")
     } else {
       this.saveAddTodo(this.todoItem)
+      console.log("I m save")
     }
   }
 
@@ -58,7 +66,7 @@ export class AddTodoComponent implements OnInit {
   }
 
 
-  saveUpdateTodo(todoId: number, todo: Todo) {
+  saveUpdateTodo(todoId: string, todo: Todo) {
     this.todoService.updateTodo(todoId, todo).subscribe((response: HttpResponse<Todo>) => {
       Swal.fire({
         title: "Success",

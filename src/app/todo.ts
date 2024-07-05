@@ -9,9 +9,9 @@ export enum TodoStatus {
 
 export class Todo {
     constructor (
-        public id: Number | null,
-        public title: String | null,
-        public details: String | null,
+        public id: string | null,
+        public title: string | null,
+        public details: string | null,
         public status: TodoStatus | null,
         public due_date: Date | null, 
     ) {}

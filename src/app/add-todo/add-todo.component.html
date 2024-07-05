@@ -1,8 +1,8 @@
 <div class="add-todo-container">
 
     <section class="h2">
-        <h2 *ngIf="isVisible">Add to Do</h2>
-        <h2 *ngIf="!isVisible">Edit to Do</h2>
+        <h2 *ngIf="showAddToDo">Add to Do</h2>
+        <h2 *ngIf="!showAddToDo">Edit to Do</h2>
     </section>
 
     <section class="form">
@@ -13,7 +13,7 @@
             <div class="form-item">
                 <label for="id">Id</label>
                 <input type="text" name="id" id="id" #id="ngModel" 
-                [required]="model.id !== undefined" [(ngModel)]="model.id">
+                [required]="model.id !== undefined" [(ngModel)]="model.id" readonly>
                 <div class="danger" [hidden]="id.pristine && id.untouched || id.valid">
                 Id is required
                 </div>
