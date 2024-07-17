@@ -15,20 +15,27 @@
     align-items: center;
   }
 
-  footer p {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
-    color: #333;
-    align-items: center;
-    justify-content: center;
-  }
-
-  footer hr {
+  hr {
     display: flex;
     width: 100%;
     align-self: flex-start;
     opacity: 0.4;
+  }
+
+  p {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+
+  @media (max-width: 768px) {
+    p {
+      padding: 0.25rem;
+    }
   }

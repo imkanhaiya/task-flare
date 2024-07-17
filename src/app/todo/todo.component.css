@@ -1,29 +1,43 @@
-/* General styles for the todo-container */
-.todo-container {
-    height: 100%;
+.h1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    padding: 0.25rem;
 }
 
 .action-buttons {
     display: flex;
-    margin: 5px 50px;
-    padding: 5px 50px;
+    width: 100%;
     justify-content: center;
+    padding: 0.25rem;
 }
 
-h1 {
-    text-align: center;
+.todo-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.25rem;
+    margin-top: 1.25rem;
 }
 
-/* Styles to center table headers and data cells */
 table {
-    width: 100%; /* Make table use all available width */
+    width: 100%;
     border-collapse: collapse; /* Collapse borders between table cells */
-    margin-top: 20px; /* Add some space above the table */
 }
 
 th, td {
     text-align: left; /* Align text to the left */
-    padding: 8px; /* Add padding inside table cells */
+    padding: 0.5rem; /* Add padding inside table cells */
     border-bottom: 1px solid #ddd; /* Add a bottom border to each cell */
 }
 
@@ -38,11 +52,6 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #eaeaea; /* Highlight row on hover */
-}
-
-section {
-    margin: 8px;
-    padding: 8px;
 }
 
 a {
@@ -60,11 +69,11 @@ a:hover{
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .todo-container {
-        padding: 10px;
+    .todo-area {
+        margin-top: 1rem;
     }
-
+    
     th, td {
-        padding: 6px; /* Reduce padding on smaller screens */
+        padding: 0.4rem; /* Add padding inside table cells */
     }
 }

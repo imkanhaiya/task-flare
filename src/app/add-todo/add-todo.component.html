@@ -1,6 +1,6 @@
-<div class="add-todo-container">
+<div class="container">
 
-    <section class="h2">
+    <section class="h2" [ngStyle]="applyMargin(todoForm)">
         <h2 *ngIf="showAddToDo">Add to Do</h2>
         <h2 *ngIf="!showAddToDo">Edit to Do</h2>
     </section>
@@ -30,7 +30,7 @@
             <div class="form-item">
                 <label for="details">Details</label>
                 <input type="text" name="details" id="details" #details="ngModel" [required]="model.details !== undefined" [(ngModel)]="model.details">
-                <div class="danger" [hidden]="details.pristine && title.untouched || details.valid" >
+                <div class="danger" [hidden]="details.pristine && details.untouched || details.valid" >
                     Details are required
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <select name="status" id="status" #status="ngModel" [required]="model.status !== 'Select'" [(ngModel)]="model.status">
                     <option *ngFor="let status of getTodoStatus()" [value]="todoStatus[status]" [disabled]="todoStatus[status] === 'Select'">{{todoStatus[status]}}</option>
                 </select>
-                <div class="danger" [hidden]="status.pristine && status.untouched || status.valid">
+                <div class="danger" [hidden]="status.pristine && status.untouched || status.valid && model.status !== todoStatus['SELECT']">
                     Status is required
                 </div>
             </div>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="form-submit">
-                <button type="submit" class="btn button-primary" [disabled]="!todoForm.form.valid">
+                <button type="submit" class="button-primary" [disabled]="!todoForm.form.valid">
                 Submit</button>
             </div>
 

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormGroup, FormsModule, NgForm } from '@angular/forms';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { Todo, TodoStatus } from '../todo';
 import { TodoService } from '../todo.service';
@@ -16,7 +16,7 @@ import { TodoComponent } from '../todo/todo.component';
   styleUrl: './add-todo.component.css'
 })
 export class AddTodoComponent implements OnInit {
-
+  
   id!: string | null;
   updateId!: string | null
   model!: Todo;
@@ -97,5 +97,22 @@ export class AddTodoComponent implements OnInit {
       })
     })
   }
-  
+
+  applyMargin (todoForm: any) {
+
+    const titleControl = todoForm?.controls.title;
+    const detailsControl = todoForm?.controls.details;
+    const statusControl = todoForm?.controls.status;
+    const dueDateControl = todoForm?.controls.due_date;
+
+    if ((titleControl?.touched && titleControl?.invalid || titleControl?.invalid & titleControl?.dirty) ||
+       (detailsControl?.touched && detailsControl?.invalid || detailsControl?.invalid & detailsControl?.dirty) ||
+       (statusControl?.touched && statusControl?.invalid || statusControl?.invalid & statusControl?.dirty) ||
+       (dueDateControl?.touched && dueDateControl?.invalid || dueDateControl?.invalid & dueDateControl?.dirty))
+       {
+        return {'margin-bottom': '3rem'}
+       }
+       return {'margin-bottom': 0}
+  }
+
 }
