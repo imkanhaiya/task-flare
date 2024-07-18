@@ -1,23 +1,23 @@
 /* Container styling */
 .header-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background-color: #0060BF;
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #0060bf;
+  justify-content: center;
+}
 
-  header {
-    display: flex;
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    margin: 0 2.5rem;
-    padding: 0 2.5rem;
-    align-items: center;
-    justify-content: space-between;
-  }
+header {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  margin: 0 2.5rem;
+  padding: 0 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
 
 figure {
   display: flex;
@@ -56,7 +56,7 @@ ul {
   width: 22rem;
   justify-content: flex-end;
   align-items: flex-end;
-  color: #FFF;
+  color: #fff;
   list-style-type: none;
   cursor: pointer;
 }
@@ -73,78 +73,75 @@ li {
 }
 
 a {
-  color: #FFF;
+  color: #fff;
   padding: 2.5px;
   margin: 2.5px;
   width: fit-content;
   height: fit-content;
   text-decoration: none;
   transition: color 0.3s;
-
 }
 
-  a:hover{
-    color: #FFC0CB;
-    transition: color 0.3s;
+a:hover {
+  color: #ffc0cb;
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  header {
+    margin: 0 1rem;
+    padding: 0 1rem;
   }
 
-
-  @media (max-width: 768px) {
-    
-    header {
-      margin: 0 1rem;
-      padding: 0 1rem;
-    }
-
-    figure {
-      width: 4.5rem;
-      max-width: 100%;
-      height: 4.5rem;
-      max-height: 100%;
-    }
-      
-    ul {
-      padding: 0.3rem;
-      height: 100%;
-      width: 19rem;
-    }
-      
-    li {
-      height: 50%;
-      width: 5.5rem;
-      margin: 2px !important;
-      padding: 0 !important;
-    }
-      
-    a {
-      padding: 2px !important;
-      margin: 0 !important;
-    }
+  figure {
+    width: 4.5rem;
+    max-width: 100%;
+    height: 4.5rem;
+    max-height: 100%;
   }
 
-  @media(max-width: 480px) {
-    header {
-      margin: 0 1rem;
-      padding: 0 1rem;
-    }
-
-    figure {
-      width: 4rem;
-      max-width: 100%;
-      height: 4rem;
-      max-height: 100%;
-    }
-      
-    ul {
-      padding: 0.25rem;
-      height: 100%;
-      width: 18rem;
-    }
-      
-    li {
-      height: 50%;
-      width: 5rem;
-      margin: 2px !important;
-      padding: 0 !important;
-    }
+  ul {
+    padding: 0.3rem;
+    height: 100%;
+    width: 19rem;
   }
+
+  li {
+    height: 50%;
+    width: 5.5rem;
+    margin: 2px !important;
+    padding: 0 !important;
+  }
+
+  a {
+    padding: 2px !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    margin: 0 1rem;
+    padding: 0 1rem;
+  }
+
+  figure {
+    width: 4rem;
+    max-width: 100%;
+    height: 4rem;
+    max-height: 100%;
+  }
+
+  ul {
+    padding: 0.25rem;
+    height: 100%;
+    width: 18rem;
+  }
+
+  li {
+    height: 50%;
+    width: 5rem;
+    margin: 2px !important;
+    padding: 0 !important;
+  }
+}

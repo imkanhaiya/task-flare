@@ -1,89 +1,92 @@
 .h1 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
 }
 
 h1 {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    align-items: center;
-    padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  padding: 0.25rem;
 }
 
 .action-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 0.25rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0.25rem;
 }
 
 .todo-area {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0.25rem;
-    margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 1.25rem;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse; /* Collapse borders between table cells */
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders between table cells */
 }
 
-th, td {
-    text-align: left; /* Align text to the left */
-    padding: 0.5rem; /* Add padding inside table cells */
-    border-bottom: 1px solid #ddd; /* Add a bottom border to each cell */
+th,
+td {
+  text-align: left; /* Align text to the left */
+  padding: 0.5rem; /* Add padding inside table cells */
+  border-bottom: 1px solid #ddd; /* Add a bottom border to each cell */
 }
 
 th {
-    background-color: #f4f4f4; /* Light gray background for header */
-    color: #333; /* Dark text color for contrast */
+  background-color: #f4f4f4; /* Light gray background for header */
+  color: #333; /* Dark text color for contrast */
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra-striping for rows */
+  background-color: #f9f9f9; /* Zebra-striping for rows */
 }
 
 tr:hover {
-    background-color: #eaeaea; /* Highlight row on hover */
+  background-color: #eaeaea; /* Highlight row on hover */
 }
 
 a {
-    text-decoration: none;
-    color: #1E90FF;
-    border-bottom: 1px solid #1E90FF;
-    transition: color 0.3s, border-color 0.3s;
-  }
+  text-decoration: none;
+  color: #1e90ff;
+  border-bottom: 1px solid #1e90ff;
+  transition: color 0.3s, border-color 0.3s;
+}
 
-a:hover{
-    color: #FFC0CB;
-    border-bottom: 1px solid #FFC0CB;
-    transition: color 0.3s, border-color 0.3s;
+a:hover {
+  color: #ffc0cb;
+  border-bottom: 1px solid #ffc0cb;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .todo-area {
-        margin-top: 1rem;
-    }
-    
-    th, td {
-        padding: 0.4rem; /* Add padding inside table cells */
-    }
+  .todo-area {
+    margin-top: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.4rem; /* Add padding inside table cells */
+  }
 }
 
 @media (max-width: 480px) {
-    .todo-area {
-        margin-top: 0.8rem;
-    }
+  .todo-area {
+    margin-top: 0.8rem;
+  }
 
-    th, td {
-        padding: 0.35rem;
-    }
+  th,
+  td {
+    padding: 0.35rem;
+  }
 }

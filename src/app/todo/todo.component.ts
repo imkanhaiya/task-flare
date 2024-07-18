@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive} from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,19 +10,19 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './todo.component.html',
-  styleUrl: './todo.component.css'
+  styleUrl: './todo.component.css',
 })
 export class TodoComponent {
-  todoService: TodoService = inject(TodoService)
+  todoService: TodoService = inject(TodoService);
   todoList: Todo[] = [];
 
   constructor(private router: Router) {
-    this.todoService.getallTodos().subscribe((todos: Todo[] | [])=> {
+    this.todoService.getallTodos().subscribe((todos: Todo[] | []) => {
       this.todoList = todos;
-    })
+    });
   }
 
   onAddTodo() {
-    this.router.navigate(['/add-todo'])
+    this.router.navigate(['/add-todo']);
   }
 }

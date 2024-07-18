@@ -1,41 +1,39 @@
 <div class="container todo-details-container">
+  <section class="h2">
+    <h2>Todo Details</h2>
+  </section>
 
-    <section class="h2">
-        <h2>Todo Details</h2>
-    </section>
+  <section class="todo-details-area">
+    <div>
+      <h4>Id</h4>
+      <p>{{ todo?.id }}</p>
+    </div>
 
-    <section class="todo-details-area">
+    <div>
+      <h4>Title</h4>
+      <p>{{ todo?.title }}</p>
+    </div>
 
-        <div>
-            <h4>Id</h4>
-            <p>{{todo?.id}}</p>
-        </div>
-       
-        <div>
-            <h4>Title</h4>
-            <p>{{todo?.title}}</p>
-        </div>
+    <div>
+      <h4>Status</h4>
+      <p>{{ todo?.status }}</p>
+    </div>
 
-        <div>
-            <h4>Status</h4>
-            <p>{{todo?.status}}</p>
-        </div>
+    <div>
+      <h4>Due Date</h4>
+      <p>{{ todo?.due_date }}</p>
+    </div>
 
-        <div>
-            <h4>Due Date</h4>
-            <p>{{todo?.due_date}}</p>
-        </div>
+    <div>
+      <h4>Details</h4>
+      <p>{{ todo?.details }}</p>
+    </div>
+  </section>
 
-        <div>
-            <h4>Details</h4>
-            <p>{{todo?.details}}</p>
-        </div>
-    </section>
-
-    <section class="action-buttons">
-        <button class="btn button-edit" (click)="onEditTodo(todo?.id)">Edit</button>
-        <button class="btn button-delete" (click)="onDeleteTodo(todo?.id)">Delete</button>
-    </section>
-
+  <section class="action-buttons">
+    <button class="btn button-edit" (click)="onEditTodo(todo?.id)">Edit</button>
+    <button class="btn button-delete" (click)="onDeleteTodo(todo?.id)">
+      Delete
+    </button>
+  </section>
 </div>
-
