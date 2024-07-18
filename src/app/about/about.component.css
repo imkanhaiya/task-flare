@@ -69,3 +69,13 @@ p {
         padding: 0.25rem;
     }
 }
+
+@media(max-width: 480px) {
+    .about-us-content {
+        display: grid;
+        height: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 16rem 16rem; /* each gird row height */
+        padding: 0.20rem;
+    }
+}

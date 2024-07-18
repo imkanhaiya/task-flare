@@ -115,3 +115,19 @@ button {
         max-width: 20%;
     }
 }
+
+
+@media(max-width: 480px) {
+    .form-item {
+        width: 80%;
+    }
+
+    .form-submit {
+        width: 25%;
+        max-width: 20%;
+    }
+
+    form, .form {
+        height: fit-content;
+    }
+}

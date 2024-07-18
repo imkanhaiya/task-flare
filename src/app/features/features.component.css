@@ -78,3 +78,13 @@ img {
     }
 }
 
+@media (max-width: 480px) {
+    .features-content {
+        display: grid;
+        height: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 16rem 16rem; /* each grid row height */
+        grid-row-gap: 0.4rem;
+    }
+}
+
